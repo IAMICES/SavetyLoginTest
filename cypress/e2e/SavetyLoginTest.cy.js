@@ -18,7 +18,7 @@ describe('Login Form', () => {
   it('should display error message when only username is entered', () => {
     cy.visit('https://savety.mynest8.com/login');
 
-    cy.get('input[data-cy=กรอกชื่อผู้ใช้งาน]').type(username,'{Enter}');
+    cy.get('input[data-cy=กรอกชื่อผู้ใช้งาน]').type(username+'{Enter}');
 
     cy.contains('กรุณากรอกข้อมูล').should('be.visible'); 
 
